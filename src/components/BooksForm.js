@@ -1,6 +1,6 @@
 import React from 'react';
 
-const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
+const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const chooseACategory = () => {
   const options = categories.map (cat => (

@@ -5,7 +5,6 @@ import {Provider} from 'react-redux';
 import roots from './reducers';
 import App from './App';
 
-
 const INITIAL_STATE = {
   books: [
     {

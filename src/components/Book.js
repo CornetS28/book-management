@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Book = ({ book: {id, title, category} }) => (
+const Book = ({ book: { id, title, category } }) => (
   <li id={id}>
     <section>
       <p>{category}</p>
@@ -12,7 +12,7 @@ const Book = ({ book: {id, title, category} }) => (
 );
 
 Book.propTypes = {
-  book: PropTypes.exact ({
+  book: PropTypes.exact({
     title: PropTypes.string,
     category: PropTypes.string,
     pages: PropTypes.integer,
