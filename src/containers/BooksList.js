@@ -27,9 +27,9 @@ BookList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       title: PropTypes.string,
-      category: PropTypes.string
-    }).isRequired
-  ).isRequired
+      category: PropTypes.string,
+    }).isRequired,
+  ).isRequired,
 };
 
 const mapStateToProps = ({ books }) => ({ books });
