@@ -1,4 +1,5 @@
 const books = (state = [], { type, id, title, category }) => {
+  
   switch (type) {
     case 'CREATE_BOOK':
       return [...state, { id, title, category }];
