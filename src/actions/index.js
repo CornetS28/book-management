@@ -6,7 +6,7 @@ export const CREATE_BOOK = (title, category) => {
   };
 };
 
-export const REMOVE_BOOK = id => {
+export const removeBook = id => {
   return {
     type: 'REMOVE_BOOK',
     id,
