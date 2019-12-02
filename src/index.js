@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import roots from './reducers';
-import App from './App';
+import App from './components/App';
 
 const INITIAL_STATE = {
   books: [
