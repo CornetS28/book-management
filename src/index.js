@@ -11,17 +11,17 @@ const INITIAL_STATE = {
     {
       id: 0,
       title: 'The King And The Lamb',
-      category: 'Sci-Fi'
+      category: 'Sci-Fi',
     },
     {
       id: 1,
       title: 'Found The Need In The Boot',
-      category: 'History'
+      category: 'History',
     },
     {
       id: 2,
       title: 'The First Tom Boy',
-      category: 'Horror'
+      category: 'Horror',
     }
   ]
 };

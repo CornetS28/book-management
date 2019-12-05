@@ -23,7 +23,8 @@
     "no-spaced-func": "off",
     "func-call-spacing": "off",
     "object-curly-newline": "off",
-    "no-alert": "off"
+    "no-alert": "off",
+    "react/prop-types": "off"
     
   }
 }

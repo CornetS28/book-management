@@ -80,7 +80,7 @@ class BooksForm extends React.Component {
 
   render() {
     const {
-      book: { title, category }
+      book: { title, category },
     } = this.state;
 
     return (
