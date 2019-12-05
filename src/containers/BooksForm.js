@@ -65,17 +65,13 @@ class BooksForm extends React.Component {
     } = this;
 
     event.preventDefault();
-    if (!event.target.value) {
-      alert('Book title can not be empty.');
-    } else {
       createBook(book);
       this.setState({
         book: {
           title: '',
           category: '',
-        }
+        },
       });
-    }
   }
 
   render() {

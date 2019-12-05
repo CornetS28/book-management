@@ -22,8 +22,8 @@ const INITIAL_STATE = {
       id: 2,
       title: 'The First Tom Boy',
       category: 'Horror',
-    }
-  ]
+    },
+  ],
 };
 
 const store = createStore(
@@ -36,5 +36,5 @@ render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
