@@ -4,7 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import roots from "./reducers";
 import App from "./components/App";
-import { composeWithDevTools} from "redux-devtools-extension";
+// import { composeWithDevTools} from "redux-devtools-extension";
 
 const INITIAL_STATE = {
   books: [
