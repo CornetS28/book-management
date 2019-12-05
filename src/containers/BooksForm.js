@@ -1,15 +1,15 @@
-import React from "react";
-import { createBook } from "../actions";
-import { connect } from "react-redux";
+import React from 'react';
+import { createBook } from '../actions';
+import { connect } from 'react-redux';
 
 const categories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi"
+  'Action',
+  'Biography',
+  'History',
+  'Horror',
+  'Kids',
+  'Learning',
+  'Sci-Fi'
 ];
 
 const ChooseACategory = ({ value, handleChange }) => {
@@ -40,8 +40,8 @@ class BooksForm extends React.Component {
     this.state = {
       book: {
         title: "",
-        category: categories[0]
-      }
+        category: categories[0],
+      },
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -53,34 +53,30 @@ class BooksForm extends React.Component {
     this.setState({
       book: {
         ...book,
-        [name]: value
-      }
+        [name]: value,
+      },
     });
   }
 
-  
   handleBookSubmit(event) {
-   
-
     const {
       state: { book },
       props: { createBook }
     } = this;
 
     event.preventDefault();
-    
     if (!event.target.value) {
-        alert("Book title can not be empty.");
-        return;
-      } else {
-        createBook(book);
-        this.setState({
-          book: {
-            title: "",
-            category: ""
-          }
-        });
-      }
+      alert("Book title can not be empty.");
+      return;
+    } else {
+      createBook(book);
+      this.setState({
+        book: {
+          title: "",
+          category: ""
+        }
+      });
+    }
   }
 
   render() {

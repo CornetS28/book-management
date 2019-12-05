@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { removeBook } from "../actions/index";
-import { connect } from "react-redux";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { removeBook } from '../actions/index';
+import { connect } from 'react-redux';
 
 const Book = ({ book: { id, title, category }, dispatch }) => (
   <li id={id}>
@@ -25,8 +25,8 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
     pages: PropTypes.integer,
-    id: PropTypes.string
-  }).isRequired
+    id: PropTypes.string,
+  }).isRequired,
 };
 
 export default connect()(Book);
