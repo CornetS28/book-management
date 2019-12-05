@@ -65,13 +65,13 @@ class BooksForm extends React.Component {
     } = this;
 
     event.preventDefault();
-      createBook(book);
-      this.setState({
-        book: {
-          title: '',
-          category: '',
-        },
-      });
+    createBook(book);
+    this.setState({
+      book: {
+        title: '',
+        category: '',
+      },
+    });
   }
 
   render() {
