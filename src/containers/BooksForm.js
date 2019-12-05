@@ -40,7 +40,7 @@ class BooksForm extends React.Component {
     this.state = {
       book: {
         title: "",
-        category: ""
+        category: categories[0]
       }
     };
 
@@ -58,8 +58,9 @@ class BooksForm extends React.Component {
     });
   }
 
+  
   handleBookSubmit(event) {
-    // let { title, categorie } = this.state
+   
 
     const {
       state: { book },
@@ -67,14 +68,19 @@ class BooksForm extends React.Component {
     } = this;
 
     event.preventDefault();
-   
-    createBook(book);
-    this.setState({
-      book: {
-        title: "",
-        category: ""
+    
+    if (!event.target.value) {
+        alert("Book title can not be empty.");
+        return;
+      } else {
+        createBook(book);
+        this.setState({
+          book: {
+            title: "",
+            category: ""
+          }
+        });
       }
-    });
   }
 
   render() {

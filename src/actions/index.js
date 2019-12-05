@@ -1,15 +1,15 @@
 export const createBook = ({ title, category }) => {
   return {
-    type: "CREATE_BOOK",
+    type: 'CREATE_BOOK',
     id: Math.floor(Math.random() * 100),
     title,
-    category
+    category,
   };
 };
 
 export const removeBook = id => {
   return {
-    type: "REMOVE_BOOK",
-    id
+    type: 'REMOVE_BOOK',
+    id,
   };
 };
