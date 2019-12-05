@@ -1,6 +1,6 @@
 import React from 'react';
-import { createBook } from '../actions';
 import { connect } from 'react-redux';
+import { createBook } from '../actions';
 
 const categories = [
   'Action',
@@ -9,7 +9,7 @@ const categories = [
   'Horror',
   'Kids',
   'Learning',
-  'Sci-Fi'
+  'Sci-Fi',
 ];
 
 const ChooseACategory = ({ value, handleChange }) => {
@@ -39,7 +39,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       book: {
-        title: "",
+        title: '',
         category: categories[0],
       },
     };
@@ -61,19 +61,18 @@ class BooksForm extends React.Component {
   handleBookSubmit(event) {
     const {
       state: { book },
-      props: { createBook }
+      props: { createBook },
     } = this;
 
     event.preventDefault();
     if (!event.target.value) {
-      alert("Book title can not be empty.");
-      return;
+      alert('Book title can not be empty.');
     } else {
       createBook(book);
       this.setState({
         book: {
-          title: "",
-          category: ""
+          title: '',
+          category: '',
         }
       });
     }

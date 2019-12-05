@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { removeBook } from '../actions/index';
 import { connect } from 'react-redux';
+import { removeBook } from '../actions/index';
+
 
 const Book = ({ book: { id, title, category }, dispatch }) => (
   <li id={id}>
