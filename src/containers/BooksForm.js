@@ -69,7 +69,7 @@ class BooksForm extends React.Component {
     this.setState({
       book: {
         title: '',
-        category: '',
+        category: categories[0],
       },
     });
   }
