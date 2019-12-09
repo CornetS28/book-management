@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import roots from './reducers';
 import App from './components/App';
+// import { composeWithDevTools} from 'redux-devtools-extension';
 
 const INITIAL_STATE = {
   books: [
@@ -25,7 +26,11 @@ const INITIAL_STATE = {
   ],
 };
 
-const store = createStore(roots, INITIAL_STATE);
+const store = createStore(
+  roots,
+  INITIAL_STATE,
+  window._REDUX_DEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_(),
+);
 
 render(
   <Provider store={store}>
