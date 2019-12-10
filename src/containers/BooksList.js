@@ -29,18 +29,18 @@ const BookList = props => {
   );
 };
 const mapStateToProps = state => {
-  let { books, filter } = state;
+  const { books, filter } = state;
   if (filter !== '') {
     books = books.filter(book => filter === book.category);
   }
   return {
-    books
+    books,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    Filterchanged: filter => dispatch(setCategoryFilter(filter))
+    Filterchanged: filter => dispatch(setCategoryFilter(filter)),
   };
 };
 

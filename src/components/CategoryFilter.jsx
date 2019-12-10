@@ -6,9 +6,9 @@ const CategoryFilter = props => {
     <div>
       <h3>List Books By Categry</h3>
       <select onChange={e => props.handleBookByFilterCategotyChange(e.target.value)}>
-        <option value=''>All</option>
-        {categories.map((categorie, index) => (
-          <option key={index}>{categorie}</option>
+        <option value="">All</option>
+        {categories.map((category, index) => (
+          <option key={index}>{category}</option>
         ))}
       </select>
     </div>
