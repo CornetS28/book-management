@@ -1,8 +1,8 @@
-import React from "react";
-import { connect } from "react-redux";
-import Book from "../components/Book";
-import CategoryFilter from "../components/CategoryFilter";
-import { setCategoryFilter } from "../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
+import { setCategoryFilter } from '../actions';
 
 const BookList = props => {
   const { books } = props;
@@ -30,7 +30,7 @@ const BookList = props => {
 };
 const mapStateToProps = state => {
   let { books, filter } = state;
-  if (filter !== "") {
+  if (filter !== '') {
     books = books.filter(book => filter === book.category);
   }
   return {
