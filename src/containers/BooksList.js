@@ -1,37 +1,50 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Book from '../components/Book';
+import React from "react";
+import { connect } from "react-redux";
+// import PropTypes from "prop-types";
+import Book from "../components/Book";
+import CategoryFilter from '../components/CategoryFilter';
+import { setCategoryFilter } from '../actions';
 
-const BookList = ({ books }) => {
-  const showAllBooks = books.map(book => <Book key={book.id} book={book} />);
 
+const BookList = (props) => {
+  const { books } = props
+  const handleBookByFilterCategotyChange = props.Filterchanged
   return (
-    <main className="">
-      <h1 className="">Books Management</h1>
-      <table className="">
+    <div>
+      <CategoryFilter handleBookByFilterCategotyChange={handleBookByFilterCategotyChange} />
+      <table>
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Category</th>
+            <th>title</th>
+            <th>category</th>
           </tr>
         </thead>
-        <tbody>{showAllBooks}</tbody>
+        <tbody>
+          {books.map((book, bookID) =>
+            <Book
+              key={bookID}
+              book={book}
+            />
+          )}
+        </tbody>
       </table>
-    </main>
+    </div>
   );
-};
+}
+const mapStateToProps = (state) => {
+  let { books, filter } = state;
+  if (filter !== '') {
+    books = books.filter((book) => filter === book.category)
+  }
+  return {
+    books
+  }
+}
 
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      category: PropTypes.string,
-    }).isRequired,
-  ).isRequired,
-};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    Filterchanged: (filter) => dispatch(setCategoryFilter(filter))
+  }
+}
 
-const mapStateToProps = ({ books }) => ({ books });
-
-export default connect(mapStateToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList)

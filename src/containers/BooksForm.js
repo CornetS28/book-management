@@ -1,16 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import categories from './constantCategories';
 
-const categories = [
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
-];
 
 const ChooseACategory = ({ value, handleChange }) => {
   const options = categories.map(cat => (
