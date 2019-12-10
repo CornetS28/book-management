@@ -1,5 +1,5 @@
-import React from "react";
-import categories from "../containers/constantCategories";
+import React from 'react';
+import categories from '../containers/constantCategories';
 
 const CategoryFilter = props => {
   return (
