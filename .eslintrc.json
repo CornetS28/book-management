@@ -28,6 +28,6 @@
     "no-underscore-dangle": "off",
     "react/destructuring-assignment": "off",
     "react/no-array-index-key": "off",
-    "react/no-array-index-key": "off"
+    "import/prefer-default-export": "off"
   }
 }
