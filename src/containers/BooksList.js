@@ -33,7 +33,7 @@ const mapStateToProps = state => {
   const { books, filter } = state;
   return {
     books:
-      filter === "" ? books : books.filter(book => filter === book.category),
+      filter === '' ? books : books.filter(book => filter === book.category),
   };
 };
 
