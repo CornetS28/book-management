@@ -33,13 +33,13 @@ const mapStateToProps = state => {
   const { books, filter } = state;
   return {
     books:
-      filter === "" ? books : books.filter(book => filter === book.category)
+      filter === "" ? books : books.filter(book => filter === book.category),
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    Filterchanged: filter => dispatch(setCategoryFilter(filter))
+    Filterchanged: filter => dispatch(setCategoryFilter(filter)),
   };
 };
 
