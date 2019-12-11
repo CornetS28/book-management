@@ -25,7 +25,10 @@
     "object-curly-newline": "off",
     "no-alert": "off",
     "react/prop-types": "off",
-    "no-underscore-dangle": "off"
-    
+    "no-underscore-dangle": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off",
+    "no-const-assign": "off"
   }
 }

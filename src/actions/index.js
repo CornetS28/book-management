@@ -13,3 +13,8 @@ export const removeBook = id => {
     id,
   };
 };
+
+export const setCategoryFilter = filter => ({
+  type: 'CHANGE_FILTER',
+  filter,
+});
