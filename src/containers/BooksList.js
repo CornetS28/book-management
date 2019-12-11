@@ -28,19 +28,18 @@ const BookList = props => {
     </div>
   );
 };
+
 const mapStateToProps = state => {
   const { books, filter } = state;
-  if (filter !== '') {
-    books = books.filter(book => filter === book.category);
-  }
   return {
-    books,
+    books:
+      filter === "" ? books : books.filter(book => filter === book.category)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    Filterchanged: filter => dispatch(setCategoryFilter(filter)),
+    Filterchanged: filter => dispatch(setCategoryFilter(filter))
   };
 };
 
