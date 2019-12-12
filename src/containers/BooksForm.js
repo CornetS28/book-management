@@ -112,14 +112,14 @@ class BooksForm extends React.Component {
       book: {
         ...book,
         [name]: value,
-      }
+      },
     });
   }
 
   handleBookSubmit(event) {
     const {
       state: { book },
-      props: { createBook }
+      props: { createBook },
     } = this;
 
     event.preventDefault();
@@ -128,13 +128,13 @@ class BooksForm extends React.Component {
       book: {
         title: '',
         category: categories[0],
-      }
+      },
     });
   }
 
   render() {
     const {
-      book: { title, category }
+      book: { title, category },
     } = this.state;
 
     return (

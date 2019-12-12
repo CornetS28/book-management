@@ -12,7 +12,7 @@ const BookList = props => {
     display: 'flex',
     justifyContent: 'space - around',
     alignItems: 'center',
-    border: 'solid 1px #e8e8e8'
+    border: 'solid 1px #e8e8e8',
   };
 
   const pagesLogo = {
@@ -26,7 +26,7 @@ const BookList = props => {
     lineHeight: 'normal',
     letterSpacing: 'normal',
     color: '#0290ff',
-    marginLeft: '16%'
+    marginLeft: '16%',
   };
 
   const { books } = props;
@@ -53,13 +53,13 @@ const mapStateToProps = state => {
   const { books, filter } = state;
   return {
     books:
-      filter === '' ? books : books.filter(book => filter === book.category)
+      filter === '' ? books : books.filter(book => filter === book.category),
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    Filterchanged: filter => dispatch(setCategoryFilter(filter))
+    Filterchanged: filter => dispatch(setCategoryFilter(filter)),
   };
 };
 
