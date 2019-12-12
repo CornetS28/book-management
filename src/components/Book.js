@@ -24,7 +24,7 @@ const bookTitle = {
   color: '#121212',
   display: 'block',
   paddingTop: '1rem',
-  paddingLeft: '2rem'
+  paddingLeft: '2rem',
 };
 
 const bookCategory = {
@@ -37,14 +37,14 @@ const bookCategory = {
   paddingLeft: '17%',
   fontFamily: 'RobotoSlab',
   fontSize: '20px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 };
 
 const line = {
   width: '2px',
   height: '70px',
   border: 'solid 1px #e8e8e8',
-  marginLeft: '230%'
+  marginLeft: '230%',
 };
 
 const removeBtn = {
@@ -60,7 +60,7 @@ const removeBtn = {
   fontWeight: 'bold',
   fontStretch: 'normal',
   letterSpacing: '0.5px',
-  fontSize: '13px'
+  fontSize: '13px',
 };
 
 const Book = ({ book: { id, title, category }, dispatch }) => (
@@ -91,8 +91,8 @@ Book.propTypes = {
   book: PropTypes.exact({
     title: PropTypes.string,
     category: PropTypes.string,
-    id: PropTypes.number
-  }).isRequired
+    id: PropTypes.number,
+  }).isRequired,
 };
 
 export default connect()(Book);

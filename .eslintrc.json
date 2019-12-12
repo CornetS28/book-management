@@ -21,6 +21,7 @@
     "arrow-body-style": "off",
     "arrow-parens": "off",
     "no-spaced-func": "off",
+    "react/self-closing-comp": "off",
     "func-call-spacing": "off",
     "object-curly-newline": "off",
     "no-alert": "off",
