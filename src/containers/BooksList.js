@@ -1,32 +1,32 @@
-import React from "react";
-import { connect } from "react-redux";
-import Book from "../components/Book";
-import CategoryFilter from "../components/CategoryFilter";
-import { setCategoryFilter } from "../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
+import { setCategoryFilter } from '../actions';
 
 const BookList = props => {
   const navbar = {
-    width: "100%",
-    height: "95px",
-    backgroundColor: "#ffffff",
-    display: "flex",
-    justifyContent: "space - around",
-    alignItems: "center",
-    border: "solid 1px #e8e8e8"
+    width: '100%',
+    height: '95px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'space - around',
+    alignItems: 'center',
+    border: 'solid 1px #e8e8e8'
   };
 
   const pagesLogo = {
-    width: "240px",
-    height: "37px",
-    fontFamily: "Montserrat",
-    fontSize: "30px",
-    fontWeight: "800",
-    fontStyle: "normal",
-    fontStretch: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    color: "#0290ff",
-    marginLeft: "16%"
+    width: '240px',
+    height: '37px',
+    fontFamily: 'Montserrat',
+    fontSize: '30px',
+    fontWeight: '800',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    color: '#0290ff',
+    marginLeft: '16%'
   };
 
   const { books } = props;
@@ -53,7 +53,7 @@ const mapStateToProps = state => {
   const { books, filter } = state;
   return {
     books:
-      filter === "" ? books : books.filter(book => filter === book.category)
+      filter === '' ? books : books.filter(book => filter === book.category)
   };
 };
 
