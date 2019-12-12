@@ -79,7 +79,7 @@ const Book = ({ book: { id, title, category }, dispatch }) => (
         onClick={() => dispatch(removeBook(id))}
         title={`Remove ${title}`}
         style={removeBtn}
-        type='button'
+        type="button"
       >
         Remove
       </button>

@@ -16,7 +16,7 @@ const insertNewBook = {
   color: '#888888',
   marginLeft: '17%',
   marginBottom: '-2%',
-  marginTop: '3%'
+  marginTop: '3%',
 };
 
 const inputStyle = {
@@ -24,7 +24,7 @@ const inputStyle = {
   height: '45px',
   borderRadius: '4px',
   border: 'solid 1px #e8e8e8',
-  backgroundColor: '#ffffff'
+  backgroundColor: '#ffffff',
 };
 
 const categorySelection = {
@@ -35,7 +35,7 @@ const categorySelection = {
   borderRadius: '4px',
   boxShadow: '0 0 60px 0 var(--black - 5)',
   backgroundColor: '#fafafa',
-  marginTop: '4%'
+  marginTop: '4%',
 };
 const categoryWrapper = {
   width: '25%',
@@ -44,7 +44,7 @@ const categoryWrapper = {
   border: 'solid 1px #e8e8e8',
   backgroundColor: '#ffffff',
   textAlign: 'center',
-  fontSize: '15px'
+  fontSize: '15px',
 };
 
 const formWrapper = {
@@ -53,7 +53,7 @@ const formWrapper = {
   display: 'flex',
   justifyContent: 'space-around',
   padding: ' 50px 0',
-  borderTop: 'solid 1px #e8e8e8'
+  borderTop: 'solid 1px #e8e8e8',
 };
 
 const bookBtnWrapper = {
@@ -67,7 +67,7 @@ const bookBtnWrapper = {
   fontStretch: 'normal',
   letterSpacing: '0.5px',
   textAlign: 'center',
-  fontSize: '13px'
+  fontSize: '13px',
 };
 const ChooseACategory = ({ value, handleChange }) => {
   const options = categories.map(cat => (
@@ -81,10 +81,10 @@ const ChooseACategory = ({ value, handleChange }) => {
       style={categorySelection}
       value={value}
       onChange={handleChange}
-      name='category'
-      id='book-a-category'
+      name="category"
+      id="book-a-category"
     >
-      <option key='placeholder' value=''>
+      <option key="placeholder" value="">
         Category
       </option>
       {options}
@@ -98,8 +98,8 @@ class BooksForm extends React.Component {
     this.state = {
       book: {
         title: '',
-        category: categories[0]
-      }
+        category: categories[0],
+      },
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -111,7 +111,7 @@ class BooksForm extends React.Component {
     this.setState({
       book: {
         ...book,
-        [name]: value
+        [name]: value,
       }
     });
   }
@@ -127,7 +127,7 @@ class BooksForm extends React.Component {
     this.setState({
       book: {
         title: '',
-        category: categories[0]
+        category: categories[0],
       }
     });
   }
@@ -146,11 +146,11 @@ class BooksForm extends React.Component {
         <div style={formWrapper}>
           <input
             style={inputStyle}
-            placeholder='Enter Book Title'
-            type='text'
-            name='title'
-            id='booo--title'
-            minLength='4'
+            placeholder="Enter Book Title"
+            type="text"
+            name="title"
+            id="booo--title"
+            minLength="4"
             value={title}
             onChange={this.handleChange}
             required
@@ -165,8 +165,8 @@ class BooksForm extends React.Component {
 
           <button
             style={bookBtnWrapper}
-            type='button'
-            id='add-a-book'
+            type="button"
+            id="add-a-book"
             onClick={this.handleBookSubmit}
           >
             Add This Book
