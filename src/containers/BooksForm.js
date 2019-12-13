@@ -25,6 +25,7 @@ const inputStyle = {
   borderRadius: '4px',
   border: 'solid 1px #e8e8e8',
   backgroundColor: '#ffffff',
+  paddingLeft: '2%',
 };
 
 const categorySelection = {
@@ -68,6 +69,7 @@ const bookBtnWrapper = {
   letterSpacing: '0.5px',
   textAlign: 'center',
   fontSize: '13px',
+  border: 'none',
 };
 const ChooseACategory = ({ value, handleChange }) => {
   const options = categories.map(cat => (
@@ -123,13 +125,17 @@ class BooksForm extends React.Component {
     } = this;
 
     event.preventDefault();
-    createBook(book);
-    this.setState({
-      book: {
-        title: '',
-        category: categories[0],
-      },
-    });
+    if (book.title === '') {
+      alert("Title field cannot be empty!")
+    } else {
+      createBook(book);
+      this.setState({
+        book: {
+          title: '',
+          category: categories[0],
+        },
+      });
+    } 
   }
 
   render() {
@@ -140,7 +146,7 @@ class BooksForm extends React.Component {
     return (
       <div>
         <span>
-          <h2 style={insertNewBook}>Insert new book</h2>
+          <h2 style={insertNewBook}>ADD NEW BOOK</h2>
         </span>
 
         <div style={formWrapper}>
@@ -149,7 +155,6 @@ class BooksForm extends React.Component {
             placeholder="Enter Book Title"
             type="text"
             name="title"
-            id="booo--title"
             minLength="4"
             value={title}
             onChange={this.handleChange}
@@ -165,8 +170,7 @@ class BooksForm extends React.Component {
 
           <button
             style={bookBtnWrapper}
-            type="button"
-            id="add-a-book"
+            type="submit"
             onClick={this.handleBookSubmit}
           >
             Add This Book

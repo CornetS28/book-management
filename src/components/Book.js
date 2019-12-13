@@ -61,6 +61,7 @@ const removeBtn = {
   fontStretch: 'normal',
   letterSpacing: '0.5px',
   fontSize: '13px',
+  border: 'none',
 };
 
 const Book = ({ book: { id, title, category }, dispatch }) => (
