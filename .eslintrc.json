@@ -16,6 +16,7 @@
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
+    "no-trailing-spaces": "off",
     "no-shadow": "off",
     "quotes": [2, "single", { "avoidEscape": false }],
     "arrow-body-style": "off",

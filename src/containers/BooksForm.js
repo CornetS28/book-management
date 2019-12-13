@@ -126,7 +126,7 @@ class BooksForm extends React.Component {
 
     event.preventDefault();
     if (book.title === '') {
-      alert("Title field cannot be empty!")
+      alert("Title field cannot be empty!");
     } else {
       createBook(book);
       this.setState({
