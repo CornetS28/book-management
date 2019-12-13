@@ -1,6 +1,7 @@
 # Book-management
-This project aims to build a book list application. It is one of the Odin's Project required by Microverse.
-In this project, users will be able to add, edit, and delete books.
+This project aims to build a book list application. It is one of the Odin's Project required by Microverse. In this project, users will be able to add, edit, and delete books.
+
+![book app image]()
 
 To build this project, we will be using the following tools and techonologies:
 - React
