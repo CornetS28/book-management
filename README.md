@@ -20,3 +20,6 @@ To run this application locally:
 - 1. Clone it on the repo
 - 2. run `npm install`
 - 3. run `npm start`
+
+# Test
+No test has been written for this project
